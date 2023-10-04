@@ -20,7 +20,7 @@
             compatible = "zmk,behavior-macro";
             label = "DELETE";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp DEL>;
+            bindings = <&kp LA(F4)>;
         };
     };
 
@@ -42,13 +42,13 @@
             tapping-term-ms = <3000>;
             hold-trigger-key-positions = <11 41>;
         };
-        Delete1: Delete1 {
+        DeleteForce: DeleteForce {
             compatible = "zmk,behavior-hold-tap";
-            label = "DELETE1";
-            bindings = <&Delete1>;
+            label = "DELETEFORCE";
+            bindings = <&Delete>;
             #binding-cells = <2>;
             tapping-term-ms = <2000>;
-            hold-trigger-key-positions = <38 11>;
+            hold-trigger-key-positions = <11 36>;
         };
     };
 
