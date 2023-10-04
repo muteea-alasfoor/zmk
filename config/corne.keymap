@@ -10,14 +10,6 @@
 
 / {
     macros {
-        Force_Quit: Force_Quit {
-            compatible = "zmk,behavior-macro";
-            label = "FORCE_QUIT";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LEFT_ALT &kp F4>,
-                <&macro_press>;
-        };
     };
 
     keymap {
