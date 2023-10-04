@@ -10,6 +10,18 @@
 
 / {
     macros {
+        EXIT: EXIT {
+            compatible = "zmk,behavior-macro";
+            label = "EXIT";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp F4>;
+        };
+        Delete: Delete {
+            compatible = "zmk,behavior-macro";
+            label = "DELETE";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp DEL>;
+        };
     };
 
     combos {
@@ -18,6 +30,25 @@
         Layer3 {
             bindings = <&mo 3>;
             key-positions = <10 11>;
+        };
+    };
+
+    behaviors {
+        AltF4: AltF4 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALTF4";
+            bindings = <&EXIT>;
+            #binding-cells = <2>;
+            tapping-term-ms = <3000>;
+            hold-trigger-key-positions = <11 41>;
+        };
+        Delete1: Delete1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "DELETE1";
+            bindings = <&Delete1>;
+            #binding-cells = <2>;
+            tapping-term-ms = <2000>;
+            hold-trigger-key-positions = <38 11>;
         };
     };
 
