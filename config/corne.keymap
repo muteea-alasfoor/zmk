@@ -30,7 +30,7 @@
 
         Layer3 {
             bindings = <&mo 3>;
-            key-positions = <25 24>;
+            key-positions = <37 0>;
         };
     };
 
